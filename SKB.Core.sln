@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A43F7C93-7CC6-4FF0-9975-D64023B1FC0D}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		Directory.Packages.props = Directory.Packages.props
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "src\Abstractions\Abstractions.csproj", "{F496B5F2-8A12-4205-B090-7514A81C75C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hosting", "src\Hosting\Hosting.csproj", "{E991CFF3-61A4-44C9-9260-4006C335CEC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F496B5F2-8A12-4205-B090-7514A81C75C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F496B5F2-8A12-4205-B090-7514A81C75C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F496B5F2-8A12-4205-B090-7514A81C75C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F496B5F2-8A12-4205-B090-7514A81C75C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E991CFF3-61A4-44C9-9260-4006C335CEC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E991CFF3-61A4-44C9-9260-4006C335CEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E991CFF3-61A4-44C9-9260-4006C335CEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E991CFF3-61A4-44C9-9260-4006C335CEC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -12,7 +12,7 @@ on:
 #| NUGET_SRC_KEY             | By what name nuget source identifies |
 #| MAJOR_VERSION             | Incremented with non-reversible (incompatible) lib changes |
 #| MINOR_VERSION             | Incremneted with feature adds |
-#  
+#
 #| Secrets                   | Values                        |
 #|---------------------------|-------------------------------|
 #| GH_PATH                   | PAT with clearances for Package uploads|
@@ -44,11 +44,6 @@ jobs:
       - name: Display dotnet version
         run: dotnet --version
 
-      # Before restoration add github.NuGet as a nuget source
-      - name: Link github.NuGet
-        run: |
-          dotnet nuget add source --username ${{ env.NUGET_OWNER_USERNAME }} --password ${{ env.FULL_PACKAGE_CONTROL_PAT }} --store-password-in-clear-text --name ${{ env.NUGET_REGISTRY }} ${{ env.NUGET_SOURCE_URL }}
-
       # Restore Dependencies
       - name: Install dependencies
         run: dotnet restore
@@ -60,7 +55,7 @@ jobs:
       # Dotnet Pack
       - name: Pack
         run: dotnet pack --configuration Release --no-restore --no-build --output ${{ env.PKG_OUTPUT_DIR }} /p:Version=${{ env.VERSION_STRING }}
-      
+
       # Publish Dotnet package to NuGet
       - name: Publish
         run: |

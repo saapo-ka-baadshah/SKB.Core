@@ -22,3 +22,6 @@ Add a section in your ``appsettings.json`` in the root level:
 }
 ````
 
+### 3. WebApi: ``EndpointExtensions``
+This provides an automatic inclusions extension for the Endpoints. Adding all Endpoints will Look for
+all implementations of ``IBaseEndpoint``.

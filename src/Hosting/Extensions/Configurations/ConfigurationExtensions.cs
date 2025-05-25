@@ -35,7 +35,11 @@ public static class ConfigurationExetensions
 		if (!builder.Environment.IsProduction())
 		{
 			builder.Configuration.SetBasePath(basePath)
-				.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json");
+				.AddJsonFile(
+					$"appsettings.{builder.Environment.EnvironmentName}.json",
+					optional: true,
+					reloadOnChange: true
+					);
 		}
 		return builder;
 	}

@@ -18,12 +18,12 @@ public static class InstrumentationExtensions
 	public static IServiceCollection AddInstrumentation<TAssembly>(this IServiceCollection services)
 	{
 		// Add Activity Source for Tracing
-		services.AddScoped<ActivitySource>(sp => new ActivitySource(
+		services.AddSingleton<ActivitySource>(sp => new ActivitySource(
 			$"{typeof(TAssembly).Namespace}.Activity"
 			));
 
 		// Add Metering Source for Metrics
-		services.AddScoped<Meter>(sp => new Meter(
+		services.AddSingleton<Meter>(sp => new Meter(
 			$"{typeof(TAssembly).Namespace}.Meter"
 			));
 		return services;

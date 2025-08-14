@@ -25,3 +25,17 @@ Add a section in your ``appsettings.json`` in the root level:
 ### 3. WebApi: ``EndpointExtensions``
 This provides an automatic inclusions extension for the Endpoints. Adding all Endpoints will Look for
 all implementations of ``IBaseEndpoint``.
+
+### 4. Auth: ``CoreAuthExtensions``
+This provides core authentication extensions accessible by adding the configuration for the application.
+This uses **Keycloak** as the Auth provider.
+```json
+{
+	"Keycloak": {
+		"MetadataAddress": "http://<address>:<port>/realms/<realm>/.well-known/openid-configuration",
+		"ValidIssuer": "http://<address>:<port>/realms/<realm>",
+		"Audience": "account",
+		"AuthorizationUrl": "http://<address>:<port>/realms/<realm>/protocol/openid-connect/auth"
+	}
+}
+```
